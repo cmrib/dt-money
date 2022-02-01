@@ -1,6 +1,17 @@
+import { useEffect, useState } from 'react'
 import { Container } from './styles'
+import { api } from '../../services/api'
 
 export function TransactionsTable() {
+
+    const [transactions, setTransactions] = useState([])
+    useEffect(() => {
+        api.get('/transactions')
+            .then(response => setTransactions(response.data))
+    }, [])
+
+    console.log(transactions)
+
 
     return (
         <Container>
@@ -22,7 +33,6 @@ export function TransactionsTable() {
                         <td>20/02/2021</td>
                     </tr>
 
-
                     <tr>
                         <td>Aluguel</td>
                         <td className='withdraw'>-R$12.000,00</td>
@@ -31,7 +41,6 @@ export function TransactionsTable() {
                     </tr>
                 </tbody>
             </table>
-
         </Container>
     )
 }

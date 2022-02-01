@@ -1,6 +1,15 @@
+import { useEffect, useState } from 'react'
 import { Container } from './styles'
 
 export function TransactionsTable() {
+
+    // sem mirageJS
+    const [transactions, setTransactions] = useState([])
+    useEffect(() => {
+        fetch('https://localhost:3000/api/transactions')
+            .then(response => response.json())
+            .then(data => console.log(data))
+    }, [])
 
     return (
         <Container>
@@ -22,7 +31,6 @@ export function TransactionsTable() {
                         <td>20/02/2021</td>
                     </tr>
 
-
                     <tr>
                         <td>Aluguel</td>
                         <td className='withdraw'>-R$12.000,00</td>
@@ -31,7 +39,6 @@ export function TransactionsTable() {
                     </tr>
                 </tbody>
             </table>
-
         </Container>
     )
 }

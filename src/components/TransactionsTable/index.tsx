@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
 import { Container } from './styles'
+import { api } from '../../services/api'
 
 export function TransactionsTable() {
 
-    // sem mirageJS
     const [transactions, setTransactions] = useState([])
     useEffect(() => {
-        fetch('https://localhost:3000/api/transactions')
-            .then(response => response.json())
-            .then(data => console.log(data))
+        api.get('/transactions')
+            .then(response => setTransactions(response.data))
     }, [])
+
+    console.log(transactions)
+
 
     return (
         <Container>

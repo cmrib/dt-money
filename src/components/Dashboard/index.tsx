@@ -9,8 +9,6 @@ export function Dashboard() {
         <Container>
             <Summary />
             <TransactionsTable />
-
         </Container>
     )
-
 }

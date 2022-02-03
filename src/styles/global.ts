@@ -35,11 +35,11 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-body, input, textarea, button{
+body, input, textarea, button {
     font-family: 'Poppins', sans-serif;    
 }
 
-h1, h2, h3, h4, h5, h6, strong{
+h1, h2, h3, h4, h5, h6, strong {
     font-weight: 600;
 }
 
@@ -74,7 +74,7 @@ button {
     position: relative;
     border-radius: 0.25rem;   
     
-    .react-modal-close{
+    .react-modal-close {
         position: absolute;
         right: 1.5rem;
         top: 1.5rem;
@@ -82,8 +82,8 @@ button {
         background: transparent;
         transition: filter 0.5s;
 
-        &:hover{
-            filter: brightness(0.8)
+        &:hover {
+            filter: brightness(0.8);
         }
     }
 }

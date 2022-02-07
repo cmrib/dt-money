@@ -17,7 +17,6 @@ export function App() {
     setIsNewTransactionModalOpen(false);
   };
 
-
   return (
     <TransactionsProvider>
 

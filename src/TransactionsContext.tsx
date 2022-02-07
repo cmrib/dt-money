@@ -19,7 +19,6 @@ interface TransactionsProviderProps {
 
 export const TransactionsContext = createContext<Transaction[]>([]); //valor default do context
 
-
 export function TransactionsProvider({ children }: TransactionsProviderProps) {
 
     const [transactions, setTransactions] = useState<Transaction[]>([])
@@ -36,4 +35,3 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     )
 
 }
-

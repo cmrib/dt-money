@@ -4,8 +4,8 @@ import { Container } from './styles'
 
 
 export function TransactionsTable() {
-    const data = useContext(TransactionsContext);
-    console.log(data)
+    const transactions = useContext(TransactionsContext);
+    console.log(transactions)
 
     return (
         <Container>
@@ -20,7 +20,7 @@ export function TransactionsTable() {
                 </thead>
 
                 <tbody>
-                    {/* {transactions.map(transaction => (
+                    {transactions.map(transaction => (
                         <tr key={transaction.id}>
                             <td>{transaction.title}</td>
                             <td className={transaction.type}>{new Intl.NumberFormat('pt-BR', {
@@ -30,7 +30,7 @@ export function TransactionsTable() {
                             <td>{transaction.category}</td>
                             <td>{new Intl.DateTimeFormat('pt-BR').format(new Date(transaction.createdAt))}</td>
                         </tr>
-                    ))} */}
+                    ))}
                 </tbody>
             </table>
         </Container>
